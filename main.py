@@ -2,7 +2,7 @@ from typing import Final
 from telegram import Update 
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN: Final = 'YOUR BOT'S TOKEN'
+TOKEN: Final = "YOUR BOT'S TOKEN"
 BOT_USERNAME: Final = '@USERNAME'
 
 pic = 'periodic.jpg'
