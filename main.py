@@ -17,6 +17,9 @@ async def help_command(update: Update, context: ContextTypes):
 async def periodic_table_command(update: Update, context: ContextTypes):
     await update.message.reply_photo(pic)
 
+async def general_info_command(update: Update, context: ContextTypes):
+    await update.message.reply_text("In periodic table we have 18 groups and 7 periods, group number 1 is alkali metals and group number 2 is alkaline metals. group 17 is called halogens and group 18 is called noble gases. In periodic table there are 8 semimetals, 20 nonmetals and rest of'em are metals.")
+
 async def mandaliof_command(update: Update, context: ContextTypes):
     await update.message.reply_text("Mendeleev was born in the village of Verkhnie Aremzyani, near Tobolsk in Siberia, to Ivan Pavlovich Mendeleev [ru] (1783–1847) and Maria Dmitrievna Mendeleeva (née Kornilieva) (1793–1850).[3][4] Ivan worked as a school principal and a teacher of fine arts, politics and philosophy at the Tambov and Saratov gymnasiums.[5] Ivan's father, Pavel Maximovich Sokolov, was a Russian Orthodox priest from the Tver region.[6] As per the tradition of priests of that time, Pavel's children were given new family names while attending the theological seminary,[7] with Ivan getting the family name Mendeleev after the name of a local landlord")
 
@@ -201,6 +204,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('semimetals', semimetals_command))
     app.add_handler(CommandHandler('nonmetals', nonmetals_command))
     app.add_handler(CommandHandler('mandaliof', mandaliof_command))
+    app.add_handler(CommandHandler('more', general_info_command))
 
     # messages 
     app.add_handler(MessageHandler(filters.TEXT, handle_message))
